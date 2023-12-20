@@ -160,28 +160,31 @@ class _LoginScreenState extends State<LoginScreen> {
                         width: double.infinity,
                         child: ElevatedButton(
                             onPressed: () {
-                              if (formkey.currentState!.validate()) {
-                                if (loginController
-                                    .emailController.text.isEmpty) {
-                                  ConstMessage()
-                                      .snackBar("Please Fill Email", "");
-                                } else if (!constValidation().validateEmail(
-                                    loginController.emailController.text)) {
-                                  ConstMessage()
-                                      .snackBar("Please enter valid email", "");
-                                } else if (loginController
-                                    .passwordController.text.isEmpty) {
-                                  ConstMessage()
-                                      .snackBar("Please Fill Password", "");
-                                }else {
-                                  ConstMessage()
-                                      .snackBar("Login Successfully!!!", "");
-                                  Get.to(()=> HomeScreen());
-                                }
-                              } else {
-                                ConstMessage().snackBar(
-                                    "Please Fill All Required Data", "");
-                              }
+
+                              Get.to(()=> HomeScreen());
+
+                              // if (formkey.currentState!.validate()) {
+                              //   if (loginController
+                              //       .emailController.text.isEmpty) {
+                              //     // ConstMessage()
+                              //     //     .snackBar("Please Fill Email", "");
+                              //   } else if (!constValidation().validateEmail(
+                              //       loginController.emailController.text)) {
+                              //     // ConstMessage()
+                              //     //     .snackBar("Please enter valid email", "");
+                              //   } else if (loginController
+                              //       .passwordController.text.isEmpty) {
+                              //     // ConstMessage()
+                              //     //     .snackBar("Please Fill Password", "");
+                              //   }else {
+                              //     // ConstMessage()
+                              //     //     .snackBar("Login Successfully!!!", "");
+                              //     Get.to(()=> HomeScreen());
+                              //   }
+                              // } else {
+                              //   ConstMessage().snackBar(
+                              //       "Please Fill All Required Data", "");
+                              // }
                             },
                             style: ElevatedButton.styleFrom(
                               primary: ConstColor.primaryColor,

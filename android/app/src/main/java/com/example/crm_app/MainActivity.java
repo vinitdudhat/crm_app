@@ -1,4 +1,4 @@
-package com.example.crm_app;
+package com.jawa.crm_app;
 
 import io.flutter.embedding.android.FlutterActivity;
 
